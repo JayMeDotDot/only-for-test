@@ -7,7 +7,7 @@ jobs:
     steps:
       - name: Hello world action step
         id: hello
-        uses: JayMeDotDot/aliyun-OSS-deployer@v0.0.1
+        uses: JayMeDotDot/aliyun-OSS-deployer@v0.0.2
         with:
           who-to-greet: 'JayMeDotDot'
       # Use the output from the `hello` step
