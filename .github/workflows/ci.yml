@@ -7,7 +7,7 @@ jobs:
     steps:
       - name: Hello world action step
         id: hello
-        uses: JayMeDotDot/aliyun-OSS-deployer@v0.0.3
+        uses: JayMeDotDot/aliyun-OSS-deployer@v0.0.4
         with:
           access-key-id: 'test-id'
           access-key-secret: 'test-secret'
