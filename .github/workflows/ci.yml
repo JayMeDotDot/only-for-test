@@ -5,15 +5,9 @@ jobs:
     runs-on: ubuntu-latest
     name: A job to say hello
     steps:
-      - name: Hello world action step
-        id: hello
+      - name: Run deploy
         uses: JayMeDotDot/aliyun-OSS-deployer@v0.0.4
         with:
-          access-key-id: 'test-id'
-          access-key-secret: 'test-secret'
-          bucket: 'test-bucket'
-          endpoint: 'test-endpoint'
-          region: 'test-region'
-      # Use the output from the `hello` step
-      - name: Get the output time
-        run: echo "The time was ${{ steps.hello.outputs.time }}"
+          endpoint: oss-cn-shanghai.aliyuncs.com
+          access-key-id: ${{ secrets.ALICLOUDOSS_KEY_ID }}
+          access-key-secret: ${{ secrets.ALICLOUDOSS_KEY_SECRET }}
