@@ -7,9 +7,13 @@ jobs:
     steps:
       - name: Hello world action step
         id: hello
-        uses: JayMeDotDot/aliyun-OSS-deployer@v0.0.2
+        uses: JayMeDotDot/aliyun-OSS-deployer@v0.0.3
         with:
-          who-to-greet: 'JayMeDotDot'
+          access-key-id: 'test-id'
+          access-key-secret: 'test-secret'
+          bucket: 'test-bucket'
+          endpoint: 'test-endpoint'
+          region: 'test-region'
       # Use the output from the `hello` step
       - name: Get the output time
         run: echo "The time was ${{ steps.hello.outputs.time }}"
