@@ -3,11 +3,12 @@ on: [push]
 jobs:
   hello_world_job:
     runs-on: ubuntu-latest
-    name: A job to say hello
+    name: Run deploy
     steps:
       - name: Run deploy
         uses: JayMeDotDot/aliyun-OSS-deployer@v0.0.4
         with:
-          endpoint: oss-cn-shanghai.aliyuncs.com
           access-key-id: ${{ secrets.ALICLOUDOSS_KEY_ID }}
           access-key-secret: ${{ secrets.ALICLOUDOSS_KEY_SECRET }}
+          endpoint: arielz.cn
+          cname: true
