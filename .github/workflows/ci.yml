@@ -4,6 +4,7 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v3
 
       - name: Run deploy
         uses: JayMeDotDot/aliyun-OSS-deployer@v1.0.0
